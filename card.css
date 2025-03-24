@@ -1,0 +1,47 @@
+.container {
+    height: 700px;
+    width: 500px;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.container::before {
+    content: "";
+    height: 800px;
+    width: 900px;
+    position: absolute;
+    background: conic-gradient(rgb(238, 17, 17), yellow, green, blue);
+    animation: rotate 3s ease-in-out infinite;
+}
+
+
+
+@keyframes rotate {
+    from {}
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+img, h1 {
+
+    z-index: 1;
+
+    /* align-items: center; */
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    inset: 15px;
+    border-radius: 10px;
+}
